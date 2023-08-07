@@ -1071,6 +1071,9 @@ Common::String parseCommandLine(Common::StringMap &settings, int argc, const cha
 			END_OPTION
 #endif
 
+			DO_LONG_OPTION("zoom-splash")
+			END_OPTION
+
 unknownOption:
 			// If we get till here, the option is unhandled and hence unknown.
 			usage("Unrecognized option '%s'", argv[i]);
@@ -2320,6 +2323,7 @@ bool processSettings(Common::String &command, Common::StringMap &settings, Commo
 		"random-seed",
 		"renderer",
 		"dump-all-dialogs",
+		"zoom-splash",
 		nullptr
 	};
 
